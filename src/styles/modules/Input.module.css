@@ -1,0 +1,114 @@
+/* src/styles/modules/Input.module.css */
+.wrapper {
+  width: 100%;
+}
+
+.label {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+
+.required {
+  color: #dc2626;
+  margin-left: 0.25rem;
+}
+
+.inputContainer {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 16px 16px 16px 48px;
+  border: 1px solid #00000066;
+  border-radius: 8px;
+  transition: all 200ms;
+  background-color: #FFFFFF;
+  font-family: 'Play', sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000; 
+  box-sizing: border-box;
+}
+
+.input:hover:not(:disabled) {
+  border-color: #B4A9FF;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #B4A9FF;
+  box-shadow: 0 0 0 2px rgba(180, 169, 255, 0.2);
+  color: #00000066; 
+}
+
+.input.error {
+  border-color: #FF7575 !important;
+  color: #00000066 !important; 
+}
+
+.input.error:focus {
+  border-color: #FF7575 !important;
+  box-shadow: 0 0 0 2px rgba(255, 117, 117, 0.2);
+  color: #00000066 !important;
+}
+
+.input:disabled {
+  background-color: #f3f4f6;
+  cursor: not-allowed;
+}
+
+.input::placeholder {
+  font-family: 'Play', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #00000066;
+  opacity: 1;
+}
+
+.iconLeft {
+  padding-left: 48px;
+}
+
+.iconRight {
+  padding-right: 48px;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.icon.left {
+  left: 16px;
+}
+
+.icon.right {
+  right: 16px;
+}
+
+.icon img {
+  filter: brightness(0) invert(0);
+  opacity: 0.4;
+}
+
+.inputContainer:hover .icon img,
+.inputContainer:focus-within .icon img {
+  filter: brightness(0) saturate(100%) invert(68%) sepia(34%) saturate(789%) hue-rotate(205deg) brightness(96%) contrast(94%);
+  opacity: 1;
+}
+
+.iconError img {
+  filter: brightness(0) saturate(100%) invert(38%) sepia(85%) saturate(1724%) hue-rotate(328deg) brightness(101%) contrast(102%);
+  opacity: 1;
+}

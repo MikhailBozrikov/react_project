@@ -1,0 +1,373 @@
+/* src/styles/modules/HeroMovie.module.css */
+.flexRowReverse {
+  display: grid;
+  grid-template-columns: 1fr 680px;
+  grid-template-rows: auto;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+  padding-top: 32px;
+  margin-bottom: 40px;
+}
+
+.posterWrapper {
+  width: 100%;
+  max-height: 552px;
+  aspect-ratio: 2/3;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-2xl);
+  background-color: #000;
+}
+
+.posterImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.posterFallback {
+  width: 100%;
+  height: 100%;
+  background-color: #374151;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+
+.posterFallbackIcon {
+  font-size: 2.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.content {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  gap: 16px;
+}
+
+.metadata {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.metadataItem {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: var(--font-play);
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.metadataItemLight {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: var(--font-play);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.ratingBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  width: 46px;
+  height: 24px;
+  border-radius: 16px;
+  padding: 4px 12px;
+  background-color: #777777;
+}
+
+.ratingStar {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.ratingValue {
+  font-family: var(--font-play);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: white;
+  width: 26px;
+  height: 24px;
+}
+
+.title {
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 700;
+  font-family: var(--font-play);
+  color: white;
+  margin: 0;
+}
+
+.plot {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+  font-family: var(--font-play);
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.trailerButton {
+  background-color: #67A5EB;
+  color: #FFFFFF;
+  flex: 0 0 171px;
+  border-radius: 28px;
+  padding: 0 48px;
+  font-family: var(--font-play);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+}
+
+.trailerButtonFixed {
+  flex: 0 0 251px;
+}
+
+.trailerButton:hover:not(:disabled),
+.trailerButton:focus-visible:not(:disabled) {
+  background-color: #45526E;
+  color: #FFFFFF80;
+}
+
+.trailerButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.movieButton {
+  background-color: #393B3C;
+  border: 1px solid #00000066;
+  color: #FFFFFF;
+  width: 183px;
+  border-radius: 28px;
+  padding: 0 48px;
+  text-decoration: none;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: background-color 0.2s, color 0.2s;
+  font-family: var(--font-play);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+}
+
+.movieButton:hover:not(:disabled),
+.movieButton:focus-visible:not(:disabled) {
+  background-color: #747474;
+  border-color: #00000066;
+  color: #FFFFFF80;
+}
+
+.actionsGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.refreshButton {
+  width: 68px;
+  height: 56px;
+  border-radius: 28px;
+  background-color: #393B3C;
+  border: 1px solid #00000066;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.refreshButton:hover,
+.refreshButton:focus-visible {
+  background-color: #747474;
+  border-color: #00000066;
+  color: #FFFFFF80;
+}
+
+.refreshIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.refreshIcon.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.actionsGroup :global(.FavoriteButton-module__iconButton) {
+  height: 56px;
+  border-radius: 28px;
+  width: 68px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1439px) {
+  .flexRowReverse {
+    padding-top: 28px;
+    margin-bottom: 36px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .flexRowReverse {
+    grid-template-columns: 1fr;
+    padding-top: 24px;
+    margin-bottom: 32px;
+  }
+  .posterWrapper {
+    order: 1;
+    width: 100%;
+    height: 350px;
+    max-width: 470px;
+    margin: 0 auto;
+    aspect-ratio: auto;
+    max-height: none;
+  }
+  .content {
+    order: 2;
+    padding: 0;
+    gap: 12px;
+  }
+  .metadataItem,
+  .metadataItemLight {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .plot {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 8px;
+  }
+  .trailerButton {
+    flex-basis: auto;
+    width: 100%;
+    max-width: 325px;
+  }
+  .trailerButtonFixed {
+    flex-basis: auto;
+    width: 251px;
+    max-width: 251px;
+  }
+  .movieButton {
+    width: 167px;
+    padding: 0 32px;
+  }
+  .actionsGroup {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .flexRowReverse {
+    margin-bottom: 24px;
+    padding-top: 0;
+    margin-top: -12px;
+  }
+  .content {
+    padding: 0;
+  }
+}
+
+@media (max-width: 479px) {
+  .flexRowReverse {
+    margin-bottom: 56px;
+  }
+  .posterWrapper {
+    height: 260px;
+    max-width: 100%;
+  }
+  .posterImage {
+    object-fit: cover;
+  }
+  .content {
+    gap: 15px;
+    padding: 0;
+  }
+  .metadataItem,
+  .metadataItemLight {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .plot {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 8px;
+  }
+  .trailerButton {
+    width: 100%;
+    padding: 0;
+    flex-basis: auto;
+  }
+  .trailerButtonFixed {
+    width: 100%;
+    max-width: 251px;
+  }
+  .actionsGroup {
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .movieButton {
+    width: 167px;
+    padding: 0 32px;
+  }
+  .refreshIcon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 374px) {
+  .flexRowReverse {
+    padding-top: 0;
+    margin-bottom: 0;
+  }
+}

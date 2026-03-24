@@ -1,0 +1,104 @@
+/* src/styles/modules/FavoritesTab.module.css */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 224px);
+  gap: 64px 40px;
+  justify-content: center;
+}
+
+@media (max-width: 1279px) {
+  .grid {
+    gap: 64px 40px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .grid {
+    gap: 64px 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .grid {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0 40px;
+    justify-content: flex-start;
+    width: max-content;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .grid > * {
+    flex: 0 0 224px;
+  }
+}
+
+.skeletonGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 224px);
+  gap: 64px 40px;
+  justify-content: center;
+}
+
+@media (max-width: 1279px) {
+  .skeletonGrid {
+    gap: 64px 40px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .skeletonGrid {
+    gap: 64px 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .skeletonGrid {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0 40px;
+    justify-content: flex-start;
+    width: max-content;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .skeletonGrid > * {
+    flex: 0 0 224px;
+  }
+}
+
+.skeletonCard {
+  width: 100%;
+  aspect-ratio: 2/3;
+  background-color: #1f2937;
+  border-radius: 16px;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.emptyState {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.emptyIcon {
+  width: 4rem;
+  height: 4rem;
+  color: #d1d5db;
+  margin: 0 auto 1rem;
+}
+
+.emptyTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.emptyText {
+  color: #9ca3af;
+}

@@ -1,0 +1,70 @@
+/* src/styles/modules/AccountTabs.module.css */
+
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.tabLink,
+.tabLink:link,
+.tabLink:visited,
+.tabLink:hover,
+.tabLink:focus,
+.tabLink:active {
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  white-space: nowrap;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1.5px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.tabLink:hover,
+.tabLink:focus {
+  border-bottom-color: #DC5DFC;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+  font-family: var(--font-play);
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background-color: #DC5DFC;
+  margin-top: 8px;
+}
+
+.tabIcon {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 767px) {
+  .tabs {
+    gap: 24px;
+   margin-bottom: 0px;
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .tabLink {
+    width: auto;
+  }
+}

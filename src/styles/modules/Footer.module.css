@@ -1,0 +1,83 @@
+/* src/styles/modules/Footer.module.css */
+.footer {
+  width: 100%;
+  border-top: 1px solid transparent;
+  padding-left: 0;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 80px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 42px 0;
+  max-width: 1280px;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid #FFFFFFCC;
+  background: transparent;
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  color: #FFFFFFCC;          
+}
+
+.socialIcon {
+  display: block;
+  width: 60%;
+  height: 60%;
+  background-color: currentColor;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  transition: background-color 0.2s ease;
+}
+
+.socialLink:hover,
+.socialLink:focus-visible {
+  color: #B4A9FF;                  
+  border-color: #B4A9FF;
+}
+
+@media (max-width: 479px) {
+  .footer {
+    padding-top: 24px;
+    padding-bottom: 36px;
+  }
+
+  .container {
+    padding: 0 20px;
+    justify-content: flex-start;
+  }
+
+  .social {
+    padding: 0;
+    max-width: 335px;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 24px;
+  }
+
+  .socialLink {
+    width: 24px;
+    height: 24px;
+  }
+}

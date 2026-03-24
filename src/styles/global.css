@@ -1,0 +1,125 @@
+/* src/styles/global.css */
+@import './variables.css';
+
+/* Сброс стандартных отступов и базовые настройки для прижатого футера */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  background: 
+    linear-gradient(128.4deg, rgba(39, 135, 245, 0.2) 0%, rgba(163, 147, 245, 0.2) 100%),
+    linear-gradient(180deg, transparent 0%, rgba(39, 36, 36, 0.7) 100%),
+    var(--color-background);
+}
+
+/*Стилизация скроллбара*/
+::-webkit-scrollbar {
+  width: 0.5px;
+  height: 0.5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+@font-face {
+  font-family: 'Play';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/Play-Regular.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Play';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/Play-Bold.woff2') format('woff2');
+  font-display: swap;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: var(--spacing-20);
+  padding-right: var(--spacing-20);
+  
+}
+
+@media (max-width: 1439px) {
+  .container {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .container {
+    padding-left: var(--spacing-12);
+    padding-right: var(--spacing-12);
+  }
+}
+
+@media (max-width: 1023px) {
+  .container {
+    padding-left: var(--spacing-8);
+    padding-right: var(--spacing-8);
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding-left: var(--spacing-6);
+    padding-right: var(--spacing-6);
+  }
+}
+
+@media (max-width: 479px) {
+  .container {
+    padding-left: var(--spacing-4);
+    padding-right: var(--spacing-4);
+  }
+}
+
+@media (max-width: 374px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Специальные стили для страницы аккаунта */
+body.account-page {
+  height: 100vh !important;         
+  overflow-y: hidden !important;    
+  overflow-x: visible !important;
+}
+
+/* возвращаем футер в нормальный поток */
+body.account-page footer {
+  position: static;                  
+}
+
+/* Делаем main flex-контейнером на странице аккаунта */
+body.account-page main {
+  display: flex;
+  flex-direction: column;
+}

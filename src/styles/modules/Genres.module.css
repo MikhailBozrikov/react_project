@@ -1,0 +1,140 @@
+/* src/styles/modules/Genres.module.css */
+.pageTitle {
+  margin: 0;
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 700;
+  font-family: var(--font-play);
+  color: white;
+  padding-top: 64px;
+  margin-bottom: 64px;
+  ;
+}
+
+.genresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 290px);
+  gap: var(--spacing-16) var(--spacing-10);
+  justify-content: center;
+}
+
+@media (max-width: 479px) {
+  .genresGrid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-6);
+  }
+  .pageTitle {
+    font-size: 24px;
+    line-height: 32px;
+    padding-top: 24px;
+    margin-bottom: 40px;
+  }
+}
+
+.loaderContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  text-align: center;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.loaderTitle {
+  height: 2rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  width: 12rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+
+.loaderGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem 4rem;
+  justify-content: center;
+}
+
+.loaderCard {
+  width: 290px;
+  height: 304px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.loadingPosters {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.6);
+  animation: pulse 1.5s infinite;
+}
+
+.errorContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.errorBox {
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  border-radius: 1rem;
+}
+
+.errorIcon {
+  width: 4rem;
+  height: 4rem;
+  color: #ef4444;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+
+.errorTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.errorMessage {
+  color: #d1d5db;
+  margin-bottom: 1rem;
+}
+
+.genresSection {
+  margin-bottom: 160px;
+}
+
+@media (max-width: 1023px) {
+  .genresSection {
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 479px) {
+  .genresSection {
+    margin-bottom: 40px;
+  }
+}
