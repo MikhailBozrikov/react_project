@@ -1,0 +1,45 @@
+/* src/styles/modules/FavoriteButton.module.css */
+.iconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 56px;
+  border-radius: 28px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: transparent;
+}
+
+.iconButton.favorite {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}
+
+.iconButton.notFavorite {
+  background-color: #393B3C;
+  border: 1px solid #00000066;
+  color: white;
+}
+
+.iconButton.notFavorite:hover,
+.iconButton.notFavorite:focus-visible {
+  background-color: #747474;
+  border-color: #00000066;
+  color: #FFFFFF80;
+}
+
+.iconHeart {
+  width: 24px;
+  height: 24px;
+}
+
+.iconButton.notFavorite:hover .iconHeart,
+.iconButton.notFavorite:focus-visible .iconHeart {
+  opacity: 0.5;
+}
+
+.iconButton.favorite .iconHeart {
+  filter: none;
+}

@@ -1,0 +1,330 @@
+/* src/styles/modules/TrailerModal.module.css */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0A0B0BE5;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  max-width: 1104px;
+  height: auto;
+  padding: 0;
+  background: none;
+  margin: 0 auto;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 1104px;
+}
+
+.content:focus-visible {
+  outline: 2px solid #67A5EB;
+  outline-offset: 2px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  background: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 30;
+}
+
+.closeIcon {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0);
+}
+
+.trailerScreen {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  max-width: 960px;
+}
+
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  outline: none;
+  overflow: hidden;
+  transition: background-color 0.2s ease;
+}
+
+.videoWrapper.loading {
+  background-color: #393B3C;
+}
+
+.videoWrapper:focus-visible {
+  outline: 2px solid #67A5EB;
+  outline-offset: 2px;
+}
+
+.playerContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  filter: brightness(0) invert(1);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.titleBar {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 24px;
+  padding: 24px 40px;
+  background-color: #0A0B0B80;
+  box-sizing: border-box;
+  z-index: 5;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.content:hover .titleBar,
+.content:focus-within .titleBar {
+  opacity: 1;
+}
+
+.titleText {
+  display: block;
+  font-family: var(--font-play), 'Play', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #FFFFFF;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+.playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  background-color: #FFFFFF;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  z-index: 10;
+  padding: 0;
+  pointer-events: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.playButton:hover {
+  background-color: #f0f0f0;
+}
+
+.playIcon {
+  width: 40px;
+  height: 40px;
+  filter: brightness(0);
+}
+
+.errorMessage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  gap: 1rem;
+}
+
+.errorIcon {
+  width: 48px;
+  height: 48px;
+  color: #ef4444;
+}
+
+@media (min-width: 1280px) {
+  .closeButton {
+    top: 0;
+  }
+}
+
+@media (max-width: 1279px) {
+  .closeButton {
+    top: 16px;
+    right: 16px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .closeButton {
+    width: 32px;
+    height: 32px;
+  }
+
+  .closeIcon {
+    width: 12px;
+    height: 12px;
+  }
+
+  .playButton {
+    width: 64px;
+    height: 64px;
+  }
+
+  .playIcon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .titleBar {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 24px 40px;
+    background-color: #0A0B0B80;
+  }
+
+  .titleText {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 479px) {
+  .content {
+    padding-bottom: 150px;
+  }
+
+  .trailerScreen {
+    overflow: visible;
+  }
+
+  .titleBar {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(100%);
+    padding: 24px 40px;
+    background: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  .content:hover .titleBar,
+  .content:focus-within .titleBar {
+    opacity: 1;
+  }
+
+  .titleBar {
+    background: none !important;
+  }
+
+  .titleText {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 374px) {
+  .overlay {
+    padding: 0.5rem;
+  }
+
+  .closeButton {
+    top: 8px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .closeIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .playButton {
+    width: 48px;
+    height: 48px;
+  }
+
+  .playIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .titleBar {
+    padding: 16px 20px;
+  }
+
+  .titleText {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

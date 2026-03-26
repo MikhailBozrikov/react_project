@@ -1,0 +1,31 @@
+/* src/styles/modules/NotFound.module.css */
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9fafb;
+}
+
+.content {
+  text-align: center;
+  padding: 2rem;
+}
+
+.code {
+  font-size: 6rem;
+  font-weight: bold;
+  color: #d1d5db;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.message {
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
