@@ -1,0 +1,61 @@
+.modalContent {
+  width: 420px;
+  background: #FFFFFF;
+  border-radius: 24px;
+  padding: 64px 40px;
+  box-sizing: border-box;
+  position: relative;
+  text-align: center;
+}
+
+.logo {
+  display: block;
+  width: 132px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.closeCircle {
+  position: absolute;
+  top: 0;
+  right: -75px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.closeCircle:hover {
+  background: #f5f5f5;
+}
+
+.closeIcon {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0);
+}
+
+.title {
+  font-family: 'Play', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #000000;
+  margin: 40px 0 12px 0;
+}
+
+.message {
+  font-family: 'Play', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  margin-bottom: 24px;
+}
